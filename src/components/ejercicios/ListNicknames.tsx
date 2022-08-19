@@ -7,17 +7,24 @@ interface propsNickNames {
 
 const Listnicknames: React.FC<propsNickNames> = ({ names, order }) => {
   return (
-    <ul>
-      {order.toUpperCase() === "ASC"
-        ? Object.values(names).map((resp: any, index: any) => {
-            return <li key={index}>{resp}</li>;
-          })
-        : Object.values(names)
-            .reverse()
-            .map((resp: any, index: any) => {
+    <>
+      <h1>
+        {order.toUpperCase() === "ASC"
+          ? "Lista Ascendente"
+          : "Lista descendente"}
+      </h1>
+      <ul>
+        {order.toUpperCase() === "ASC"
+          ? Object.values(names).map((resp: any, index: any) => {
               return <li key={index}>{resp}</li>;
-            })}
-    </ul>
+            })
+          : Object.values(names)
+              .reverse()
+              .map((resp: any, index: any) => {
+                return <li key={index}>{resp}</li>;
+              })}
+      </ul>
+    </>
   );
 };
 

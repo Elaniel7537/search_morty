@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import { useState } from "react";
 // componentes
 import ListPeopleComponent from "@/components/modules/peoples/listPeoplesComponent";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   const [filter, setFilter] = useState(false);
@@ -31,8 +32,15 @@ const Home: NextPage = () => {
           </div>
           <div className="form-item">
             <button type="submit">Buscar</button>
+            <Link href="/ejercicios/listaNames">
+              <button className="btn-ejer">Ejercicio. 2</button>
+            </Link>
           </div>
-          {searchData ?  <h4>Estas buscando por: {searchData}</h4> : <h4>Comienza a buscar.</h4>}
+          {searchData ? (
+            <h4>Estas buscando por: {searchData}</h4>
+          ) : (
+            <h4>Comienza a buscar.</h4>
+          )}
         </form>
       </header>
       <br />
