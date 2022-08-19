@@ -1,7 +1,11 @@
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import "styles/globals.css"
+// css
+import "styles/globals.css";
+// store
+import { store } from "@redux/store";
+import { Provider } from "react-redux";
 
 const baseURL = process.env.NEXT_PUBLIC_ENDPOINT;
 
@@ -32,7 +36,9 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
         <title>Rick y Morty</title>
       </Head>
       <ApolloProvider client={client}>
-        <Component {...pageProps} />
+        <Provider store={store}>
+          <Component {...pageProps} />
+        </Provider>
       </ApolloProvider>
     </>
   );
