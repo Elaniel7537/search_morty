@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import { useState } from "react";
+// componentes
 import ListPeopleComponent from "@/components/modules/peoples/listPeoplesComponent";
 
 const Home: NextPage = () => {

@@ -19,7 +19,8 @@
       "@/*": ["./src/*"],
       "@styles/*": ["./styles/*"],
       "@graphql/*": ["./src/graphql/*"],
-      "@components/*": ["./src/components/*"]
+      "@components/*": ["./src/components/*"],
+      "@redux/*": ["./src/redux/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
