@@ -103,6 +103,10 @@ a.card-action {
   border-radius: 10px;
 }
 
+.btn-ejer {
+  margin-left: 1rem;
+}
+
 /* media-query */
 
 @media (prefers-color-scheme: dark) {
